@@ -1,0 +1,69 @@
+
+package comp1112projectelifsu;
+
+public class TransportTruck extends Truck{
+
+    private boolean abroad;
+
+    TransportTruck(String plateNumber, int numberOfTires, double dailyFee, boolean abroad) {
+        super(plateNumber, numberOfTires, dailyFee);
+        this.abroad= abroad;
+    }
+
+
+    public boolean isAbroad() {
+        return abroad;
+    }
+
+    public String abroadTruck(){
+        if(abroad){
+            return "Transport truck goes abroad.";
+        }
+        return "Transport truck does not go abroad.";
+
+    }
+
+    @Override
+    public int getNumberOfDays(int bYear, int bMonth, int bday, int dYear, int dMonth, int dday) {
+        return super.getNumberOfDays(bYear, bMonth, bday, dYear, dMonth, dday);
+    }
+
+    @Override
+    public double getDailyFee(int bYear, int bMonth, int bday, int dYear, int dMonth, int dday) {
+        return super.getDailyFee(bYear, bMonth, bday, dYear, dMonth, dday);
+    }
+
+    @Override
+    public void bookMe(int bYear, int bMonth, int bday, int dYear, int dMonth, int dday) throws Exception {
+        super.bookMe(bYear, bMonth, bday, dYear, dMonth, dday);
+    }
+
+    @Override
+    public void cancelMe(int bYear, int bMonth, int bday, int cYear, int cMonth, int cday) throws Exception {
+        super.cancelMe(bYear, bMonth, bday, cYear, cMonth, cday);
+    }
+
+    @Override
+    public void rentMe(int bYear, int bMonth, int bday, int dYear, int dMonth, int dday, boolean company, boolean customer) throws Exception {
+       super.rentMe(bYear, bMonth, bday, dYear, dMonth, dday, company, customer);
+    }
+
+    @Override
+    public void dropMe(int bYear, int bMonth, int bday, int dYear, int dMonth, int dday) {
+        super.dropMe(bYear, bMonth, bday, dYear, dMonth, dday);
+    }
+
+    @Override
+    public void loadMe(double capacity) throws Exception {
+        super.loadMe(capacity);
+    }
+
+
+    public String toString(){
+        return super.toString()+ " is Abroad: "+ abroad;
+
+    }
+
+
+
+}
